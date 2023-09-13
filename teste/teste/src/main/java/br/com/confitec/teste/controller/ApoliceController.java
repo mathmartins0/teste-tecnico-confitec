@@ -1,6 +1,8 @@
 package br.com.confitec.teste.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -35,7 +37,8 @@ public class ApoliceController {
      * 	Retorna um DTO {@link ParcelamentoResponseDTO}, com uma lista do parcelamento {@link DadosParcelamentoDTO}
      */
     @PostMapping("/parcelamento")
-    public ParcelamentoResponseDTO obterParcelas(@RequestBody ParcelamentoRequestDTO parcelamento) {
-        return apoliceService.calcularParcelas(parcelamento);
+    public ResponseEntity<ParcelamentoResponseDTO> obterParcelas(@RequestBody ParcelamentoRequestDTO parcelamento) {
+        return new ResponseEntity<ParcelamentoResponseDTO>(
+        		apoliceService.calcularParcelas(parcelamento), HttpStatus.OK);
     }
 }
