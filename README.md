@@ -7,7 +7,8 @@ Cálculo das opções de parcelamento com ou sem juros.
 Exposição de um endpoint REST para realizar os cálculos.
 
 # Endpoints
-POST /confitec/teste/parcelamento: Recebe uma requisição contendo as coberturas e opções de parcelamento e retorna os detalhes dos planos de parcelamento possíveis.
+POST /confitec/teste/parcelamento: 
+  Recebe uma requisição contendo as coberturas e opções de parcelamento e retorna os detalhes dos planos de parcelamento possíveis.
 
 # Como Executar
 Clone o repositório.
@@ -16,8 +17,7 @@ Execute o projeto usando seu ambiente de desenvolvimento Java ou utilizando a li
   mvn spring-boot:run
 
 # Testes
-O projeto inclui testes unitários simples para as principais funcionalidades.
-
+O projeto inclui testes unitários simples para as principais funcionalidades.]
 Para executar os testes, use:
   mvn test
   
